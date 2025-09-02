@@ -1,0 +1,345 @@
+:root{
+  --bg: #f6f7f8; /* page background */
+  --card: #ffffff; /* post background */
+  --muted: #6a6a6a; /* text muted */
+  --accent: #ff4500; /* reddit orange */
+  --accent-dark: #e03e00;
+  --primary-blue: #0079d3; /* retained for links */
+  --border: #e9eef2;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background-color: var(--bg);
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  color: #111;
+}
+
+.container {
+  width: 600px;
+}
+
+
+h1 {
+  text-align: center;
+  margin: 0;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.site-header{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  justify-content: center;
+}
+
+.logo{
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo svg{ display: block; }
+.logo{ margin-right: 10px; }
+
+.site-title{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.app-name{
+  font-weight: 800;
+  color: var(--accent);
+  font-size: 34px; /* larger, reddit-like */
+  letter-spacing: -0.6px;
+  line-height: 1;
+}
+.app-subtitle{
+  font-size: 14px;
+  color: #666;
+  margin-top: 4px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+form input, form textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  padding: 10px;
+  border: none;
+  background-color: var(--accent);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background-color: var(--accent-dark);
+}
+
+.post-card {
+  display: flex;
+  background-color: var(--card);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(16,24,32,0.06);
+  margin-bottom: 15px;
+  flex-direction: column;
+  border: 1px solid var(--border);
+}
+
+.vote-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border-right: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.01));
+}
+
+.vote-section button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.vote-section .upvote {
+  color: var(--accent);
+}
+.vote-section .downvote {
+  color: #8b8b9a; /* grey for downvote */
+}
+.vote-section button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px;
+  transition: color 150ms ease;
+}
+.vote-section .downvote:hover {
+  color: #6f6f77;
+}
+.vote-section button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.vote-section .download {
+  margin-top: 8px;
+  background-color: #ffffff;
+  border: 1px solid var(--border);
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.vote-section .download:hover {
+  background-color: #fff4f0;
+  border-color: #ffd4bf;
+}
+.vote-section .download:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.vote-count {
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.post-content {
+  padding: 10px 15px;
+  flex: 1;
+}
+
+.post-title {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+}
+
+.post-description {
+  margin: 0 0 10px 0;
+  color: var(--muted);
+}
+
+.post-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #8b8b8b;
+}
+
+.tags {
+  font-style: italic;
+}
+
+.comments-section {
+  margin-top: 10px;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+.comment-form {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.comment-form input {
+  flex: 1;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.comment-form button {
+  padding: 5px 10px;
+  border: none;
+  background-color: var(--accent);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+.comment-form button:hover {
+  background-color: var(--accent-dark);
+}
+
+.comments-list {
+  margin-left: 20px;
+}
+
+.comment {
+  background-color: var(--bg);
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  position: relative;
+  border: 1px solid #f0f2f4;
+}
+
+.comment .comment-vote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 8px;
+}
+.comment .comment-vote button {
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  color: #8b8b9a;
+  padding: 2px;
+  transition: color 150ms ease, background-color 150ms ease;
+}
+.comment .comment-vote .comment-vote-count {
+  font-size: 12px;
+  margin: 2px 0;
+  font-weight: bold;
+}
+.comment .comment-vote button.voted {
+  color: #fff;
+  background: #ff4500;
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+.comment .comment-vote button.voted.comment-down {
+  background: #6f6f77;
+}
+
+
+.reply-button {
+  font-size: 12px;
+  color: var(--primary-blue);
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+/* voted state visual indicators */
+.vote-section .upvote.voted {
+  color: #ffffff;
+  background-color: var(--accent);
+  border-radius: 6px;
+  padding: 4px 6px;
+}
+.vote-section .downvote.voted {
+  color: #ffffff;
+  background-color: #6f6f77;
+  border-radius: 6px;
+  padding: 4px 6px;
+}
+
+/* clear all button */
+/* clear button removed */
+
+/* search box */
+#search-box {
+  padding: 6px 10px;
+  width: 60%;
+  max-width: 360px;
+  border-radius: 6px;
+  border: 1px solid #d0d3d6;
+}
+#search-box:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255,69,0,0.08);
+  border-color: var(--accent);
+}
+.search-hit {
+  background: rgba(255,69,0,0.14);
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+.reply-button:hover {
+  text-decoration: underline;
+}
+
+.reply-form {
+  display: flex;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+.reply-form input {
+  flex: 1;
+  padding: 3px 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.reply-form button {
+  padding: 3px 8px;
+  border: none;
+  background-color: #0079d3;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+.reply-form button:hover {
+  background-color: #005999;
+}

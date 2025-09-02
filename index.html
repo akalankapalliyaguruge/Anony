@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reddit-Style Q&A Forum</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+  <header class="site-header">
+    <div class="logo">
+      <!-- Simple original logo inspired by Reddit's color palette -->
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="12" cy="12" r="11" fill="#FF4500" />
+        <circle cx="8.5" cy="11" r="1.4" fill="#fff" />
+        <circle cx="15.5" cy="11" r="1.4" fill="#fff" />
+        <path d="M7 15c1.2 1.2 2.8 2 5 2s3.8-.8 5-2" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="17.5" cy="6.5" r="1.2" fill="#fff" />
+      </svg>
+    </div>
+    <div class="site-title">
+      <div class="app-name">Annony</div>
+      <div class="app-subtitle">Anonymous Q&amp;A Forum</div>
+    </div>
+  </header>
+
+  <div class="controls" style="text-align:center; margin-bottom:12px;">
+    <input id="search-box" type="search" placeholder="Search posts..." aria-label="Search posts" style="padding:6px 10px; width:60%; max-width:360px; border-radius:6px; border:1px solid #d0d3d6;" />
+  </div>
+
+  <!-- New Post Form -->
+  <form id="new-post-form">
+    <input type="text" id="post-title" placeholder="Question Title" required>
+    <textarea id="post-description" placeholder="Write your question..." required></textarea>
+    <input type="text" id="post-tags" placeholder="Tags (comma separated)">
+    <button type="submit">Post Question</button>
+  </form>
+
+  <!-- Posts Container -->
+  <div id="posts-container"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
