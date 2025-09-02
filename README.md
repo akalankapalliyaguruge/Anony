@@ -1,5 +1,4 @@
-# Anony
-Annony — Anonymous Q&A Forum
+# Anony — Anonymous Q&A Forum 
 
 Overview
 
