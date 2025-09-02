@@ -24,11 +24,7 @@ How to run locally
 
 Deployment (static hosts)
 
-This is a static site — any static host will work. Common choices:
-
-- GitHub Pages: push the repo and enable Pages on the `main` branch (or `gh-pages`).
-- Netlify: drag & drop the project folder to Netlify Drop or connect your Git repo.
-- Vercel: import the repo and deploy.
+This is a static site.
 
 Limitations
 
