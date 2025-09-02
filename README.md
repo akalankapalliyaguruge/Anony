@@ -2,7 +2,7 @@
 
 Overview
 
-annony is a small static Anonymous Q&A Forum built with plain HTML/CSS/JS. It stores posts, comments, scores and per-browser vote state in localStorage so it works offline and without a server (single-browser demo).
+Anony is a small static Anonymous Q&A Forum built with plain HTML/CSS/JS. It stores posts, comments, scores and per-browser vote state in localStorage so it works offline and without a server (single-browser demo).
 
 Files
 
